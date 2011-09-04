@@ -1,7 +1,7 @@
 Ender Poke
 ============
 
-A tiny (516 bytes minified) [Ender](http://ender.no.de) module for handling swipe gestures on mobile devices. Currently, the four cardinal directions are supported. To use it, add it to your Ender build (see below) and do something like this:
+A tiny (about 600 bytes minified) [Ender](http://ender.no.de) module for handling swipe gestures on mobile devices. Currently, the four cardinal directions are supported. To use it, add it to your Ender build (see below for help on that) and do something like this:
 
 ``` javascript
 $('#someElement').poke({
