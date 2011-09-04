@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="Ender Poke Example Page">
+		<meta name="developer" content="Paul Straw">
+		<meta name="viewport" content="width=device-width initial-scale=1">
+
+		<title>Ender Poke Example Page</title>
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+
+			html, body {
+				height: 100%;
+				min-height: 100%;
+			}
+
+			body {
+				font-family: "Helvetica Neue", "Helvetica", sans-serif;
+				text-align: center;
+			}
+
+			#hello {
+				font-weight: bold;
+				font-size: 36px;
+				width: 100%;
+				height: 100%;
+				padding-top: 40%;
+			}
+		</style>
+
+		<script src="ender.js"></script>
+		<script src="ender.poke.js"></script>
+	</head>
+
+	<body>
+		<p>swipe anywhere (N-E, S-W-N, or E)</p>
+		<div id="hello"></div>
+		<script>
+			!function(){
+				var h = $('#hello')[0];
+
+				$(document).bind('touchmove', function(e) {
+					e.preventDefault();
+				}).poke({
+					'N-E': function() {
+						h.innerHTML = 'N-E';
+					},
+					'S-W-N': function() {
+						h.innerHTML = 'S-W-N';
+					},
+					'E': function() {
+						h.innerHTML = 'E';
+					}
+				});
+			}();
+		</script>
+	</body>
+</html>
