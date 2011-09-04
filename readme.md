@@ -20,7 +20,7 @@ $('#someElement').poke({
 Ender
 -------
 
-Poke is an NPM package that requires Ender. If you're not already using Ender, you're missing out; get it now:
+Poke is an [NPM](http://npmjs.org/) package that requires Ender. If you're not already using Ender, you're missing out; get it now:
 
 ```
 $ npm install ender -g
