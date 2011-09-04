@@ -1,3 +1,11 @@
+/*!
+	* Poke, an Ender module for handling swipe gestures on mobile devices
+	* Version 0.0.1
+	* (c) 2011 Paul Straw (@pausltraw)
+	* Lots of code from Zepto's touch module: https://github.com/madrobby/zepto
+	* Released under the MIT License
+*/
+
 !function($) {
 	$.ender({
 		poke: function(events) {
