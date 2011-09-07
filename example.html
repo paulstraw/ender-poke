@@ -30,8 +30,9 @@
 				font-weight: bold;
 				font-size: 36px;
 				width: 100%;
-				height: 100%;
-				padding-top: 40%;
+				height: 50px;
+				margin-top: 40%;
+				background: rgba(255, 255, 0, 0.3);
 			}
 		</style>
 
@@ -40,7 +41,7 @@
 	</head>
 
 	<body>
-		<p>swipe anywhere (N-E, S-W-N, or E)</p>
+		<p>swipe, starting on the stripe (N-E, S-W-N, or E)</p>
 		<div id="hello"></div>
 		<script>
 			!function(){
@@ -48,7 +49,9 @@
 
 				$(document).bind('touchmove', function(e) {
 					e.preventDefault();
-				}).poke({
+				});
+
+				$('#hello').poke({
 					'N-E': function() {
 						h.innerHTML = 'N-E';
 					},

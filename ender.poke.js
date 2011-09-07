@@ -1,6 +1,6 @@
 /*!
 	* Poke, an Ender module for handling swipe gestures on mobile devices
-	* Version 0.0.1
+	* Version 0.1.1
 	* (c) 2011 Paul Straw (@pausltraw)
 	* Lots of code from Zepto's touch module: https://github.com/madrobby/zepto
 	* Released under the MIT License
@@ -13,7 +13,8 @@
 				var t = $(el),
 					gestures,
 					touch = {},
-					lastSwipe;
+					lastSwipe,
+					lastTouch;
 
 				function swipeDirection(x1, x2, y1, y2){
 					var xDelta = Math.abs(x1 - x2), yDelta = Math.abs(y1 - y2);
@@ -29,13 +30,14 @@
 						//reset stuff
 						gestures = [];
 						lastSwipe = '';
+						lastTouch = e.touches.length - 1;
 
-						touch.x1 = e.touches[0].pageX;
-						touch.y1 = e.touches[0].pageY;
+						touch.x1 = e.touches[lastTouch].pageX;
+						touch.y1 = e.touches[lastTouch].pageY;
 					},
 					touchmove: function(e) {
-						touch.x2 = e.touches[0].pageX;
-						touch.y2 = e.touches[0].pageY;
+						touch.x2 = e.touches[lastTouch].pageX;
+						touch.y2 = e.touches[lastTouch].pageY;
 
 						if (Math.abs(touch.x1 - touch.x2) > 60 || Math.abs(touch.y1 - touch.y2) > 60) {
 							var currentSwipe = swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2);

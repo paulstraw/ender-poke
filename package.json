@@ -1,7 +1,7 @@
 {
 	"name": "ender-poke",
 	"description": "An Ender module for handling swipe gestures on mobile devices",
-	"version": "0.0.1",
+	"version": "0.1.1",
 	"homepage": "https://github.com/paulstraw/ender-poke",
 	"authors": ["Paul Straw (@paulstraw)"],
 	"repository": {
